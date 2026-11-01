@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wowkeet_green_primary">#075E54</color>
+    <color name="wowkeet_green_secondary">#128C7E</color>
+    <color name="wowkeet_green_accent">#25D366</color>
+    <color name="chat_bubble_seller">#DCF8C6</color>
+    <color name="chat_bubble_admin">#FFFFFF</color>
+    <color name="chat_bg">#ECE5DD</color>
+    <color name="tick_blue">#34B7F1</color>
+    <color name="tick_gray">#8696A0</color>
+    <color name="text_primary">#111B21</color>
+    <color name="text_secondary">#667781</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

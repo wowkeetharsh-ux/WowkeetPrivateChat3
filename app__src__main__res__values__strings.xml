@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Wowkeet Private Chat</string>
+    <string name="login_title">Wowkeet Private Chat</string>
+    <string name="admin_title">Admin Panel</string>
+    <string name="seller_title">Seller Workspace</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="msg_deleted">This message was deleted</string>
+</resources>

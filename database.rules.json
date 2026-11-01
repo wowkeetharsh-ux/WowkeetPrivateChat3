@@ -1,0 +1,39 @@
+{
+  "rules": {
+    "chats": {
+      "$sellerId": {
+        ".read": "auth != null && (root.child('admins').child(auth.uid).exists() || auth.uid == $sellerId)",
+        ".write": "auth != null && (root.child('admins').child(auth.uid).exists() || auth.uid == $sellerId)",
+        "messages": {
+          ".indexOn": ["timestamp"]
+        }
+      }
+    },
+    "sellers": {
+      ".read": "auth != null",
+      "$sellerId": {
+        ".write": "auth != null && (root.child('admins').child(auth.uid).exists() || auth.uid == $sellerId)"
+      }
+    },
+    "admins": {
+      ".read": "auth != null",
+      ".write": false
+    },
+    "pushTokens": {
+      "admin": {
+        ".read": "auth != null && root.child('admins').child(auth.uid).exists()",
+        "$deviceId": {
+          ".write": "auth != null && root.child('admins').child(auth.uid).exists()"
+        }
+      },
+      "sellers": {
+        "$sellerId": {
+          ".read": "auth != null && (root.child('admins').child(auth.uid).exists() || auth.uid == $sellerId)",
+          "$deviceId": {
+            ".write": "auth != null && (root.child('admins').child(auth.uid).exists() || auth.uid == $sellerId)"
+          }
+        }
+      }
+    }
+  }
+}
